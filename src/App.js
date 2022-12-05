@@ -60,10 +60,12 @@ function App() {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
     } else {
       alert("Word Not Found");
+      return;
     }
 
     if (currWord.toLowerCase() === correctWord.toLowerCase()) {
       setGameOver({ gameOver: true, guessedWord: true });
+      return;
     }
 
     if (currAttempt.attempt === 5) {
